@@ -14,6 +14,7 @@
 		53A28FC01F404BC5001931DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A28FBF1F404BC5001931DA /* Assets.xcassets */; };
 		53A28FC31F404BC5001931DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A28FC11F404BC5001931DA /* LaunchScreen.storyboard */; };
 		53A28FCE1F404BC5001931DA /* ButtonLayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A28FCD1F404BC5001931DA /* ButtonLayerTests.m */; };
+		57CFAD32204376FF89D25C13 /* libPods-ButtonLayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2FC0E444B92E83888929A1 /* libPods-ButtonLayer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		53A28FC91F404BC5001931DA /* ButtonLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A28FCD1F404BC5001931DA /* ButtonLayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonLayerTests.m; sourceTree = "<group>"; };
 		53A28FCF1F404BC5001931DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65B44E35B8B42F770590F8CA /* Pods-ButtonLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButtonLayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ButtonLayer/Pods-ButtonLayer.release.xcconfig"; sourceTree = "<group>"; };
+		9F5C65C9DCC97F02A4F1C1F9 /* Pods-ButtonLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButtonLayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ButtonLayer/Pods-ButtonLayer.debug.xcconfig"; sourceTree = "<group>"; };
+		DE2FC0E444B92E83888929A1 /* libPods-ButtonLayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ButtonLayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57CFAD32204376FF89D25C13 /* libPods-ButtonLayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23CA06841E52E8CA70D96300 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F5C65C9DCC97F02A4F1C1F9 /* Pods-ButtonLayer.debug.xcconfig */,
+				65B44E35B8B42F770590F8CA /* Pods-ButtonLayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4C3324499F8C5D964440D86B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE2FC0E444B92E83888929A1 /* libPods-ButtonLayer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		53A28FA71F404BC5001931DA = {
 			isa = PBXGroup;
 			children = (
 				53A28FB21F404BC5001931DA /* ButtonLayer */,
 				53A28FCC1F404BC5001931DA /* ButtonLayerTests */,
 				53A28FB11F404BC5001931DA /* Products */,
+				23CA06841E52E8CA70D96300 /* Pods */,
+				4C3324499F8C5D964440D86B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53A28FD21F404BC5001931DA /* Build configuration list for PBXNativeTarget "ButtonLayer" */;
 			buildPhases = (
+				F91F51FAB3B1E248D6890D32 /* [CP] Check Pods Manifest.lock */,
 				53A28FAC1F404BC5001931DA /* Sources */,
 				53A28FAD1F404BC5001931DA /* Frameworks */,
 				53A28FAE1F404BC5001931DA /* Resources */,
+				EA3095720BE6E93998497B9B /* [CP] Embed Pods Frameworks */,
+				3561A433638AFA0FE5F34959 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +236,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3561A433638AFA0FE5F34959 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ButtonLayer/Pods-ButtonLayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA3095720BE6E93998497B9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ButtonLayer/Pods-ButtonLayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F91F51FAB3B1E248D6890D32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53A28FAC1F404BC5001931DA /* Sources */ = {
@@ -351,6 +426,7 @@
 		};
 		53A28FD31F404BC5001931DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F5C65C9DCC97F02A4F1C1F9 /* Pods-ButtonLayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 22R5TS4DAZ;
@@ -363,6 +439,7 @@
 		};
 		53A28FD41F404BC5001931DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65B44E35B8B42F770590F8CA /* Pods-ButtonLayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 22R5TS4DAZ;
